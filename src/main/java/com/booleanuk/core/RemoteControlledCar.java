@@ -5,11 +5,16 @@ import java.util.Arrays;
 
 public class RemoteControlledCar {
     private String colour;
+    private int xCoordinate, yCoordinate;
+    private String direction;
     private final ArrayList<String> validColours;
 
     public RemoteControlledCar() {
         colour = "white";
-        validColours = new ArrayList<>(Arrays.asList("orange","pink", "black"));
+        xCoordinate = 0;
+        yCoordinate = 0;
+        direction = "n";
+        validColours = new ArrayList<>(Arrays.asList("orange","pink", "black", "white"));
     }
 
     public boolean setColour(String colour) {
@@ -22,5 +27,20 @@ public class RemoteControlledCar {
 
     public String getColour() {
         return colour;
+    }
+
+    public void moveForward(int meters) {
+    }
+
+    public int getXCoordinate() {
+        return xCoordinate;
+    }
+
+    public int getYCoordinate() {
+        return yCoordinate;
+    }
+
+    public String getDirection() {
+        return direction;
     }
 }
