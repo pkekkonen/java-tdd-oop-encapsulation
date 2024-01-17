@@ -11,7 +11,8 @@ public class RemoteControlledCar {
     }
 
     public boolean setColour(String colour) {
-        return false;
+        this.colour = colour;
+        return true;
     }
 
     public String getColour() {
