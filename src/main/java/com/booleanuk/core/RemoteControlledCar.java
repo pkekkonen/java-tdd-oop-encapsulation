@@ -30,6 +30,12 @@ public class RemoteControlledCar {
     }
 
     public void moveForward(int meters) {
+        switch (direction) {
+            case "n" -> yCoordinate += meters;
+            case "e" -> xCoordinate += meters;
+            case "s" -> yCoordinate -= meters;
+            case "w" -> xCoordinate -= meters;
+        }
     }
 
     public int getXCoordinate() {
