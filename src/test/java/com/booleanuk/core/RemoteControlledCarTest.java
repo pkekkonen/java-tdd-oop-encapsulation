@@ -12,6 +12,14 @@ public class RemoteControlledCarTest {
         Assertions.assertTrue(car.setColour("pink"));
         Assertions.assertEquals("pink", car.getColour());
     }
+
+    @Test
+    public void setInvalidColourTest() {
+        RemoteControlledCar car = new RemoteControlledCar();
+        Assertions.assertNotEquals("blue", car.getColour());
+        Assertions.assertFalse(car.setColour("blue"));
+        Assertions.assertNotEquals("blue", car.getColour());
+    }
 }
 
 
